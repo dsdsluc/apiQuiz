@@ -40,7 +40,7 @@ app.get('/questions/:idQuestion', async(req, res) => {
   const idQuestion = req.params.idQuestion;
   
   const question = await Question.findOne({
-    idQuestion: idQuestion
+    _id : idQuestion
   })
     res.json({
       code: 200,
